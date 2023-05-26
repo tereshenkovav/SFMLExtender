@@ -67,6 +67,15 @@ void Game::drawLabel(sf::RenderTarget & target, const char * fmt, int x, int y, 
 	target.draw(text) ;
 }
 
+void Game::drawLabelW(sf::RenderTarget& target, const std::wstring& wstr, int x, int y, const sf::Font& font, int size,
+	sf::Color color)
+{
+	sf::Text text(wstr, font, size);
+	text.setPosition(x, y);
+	text.setFillColor(color);
+	target.draw(text);
+}
+
 Game::~Game(void)
 {
 }
